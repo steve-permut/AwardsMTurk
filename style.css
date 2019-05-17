@@ -22,10 +22,18 @@ body {
 .pages {
   margin-top: 10px;
   margin-bottom: 50px;
-  padding: 20px;
+  padding: 70px;
+  height: 450px;
+  width: 800px;
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
+  z-index: 0;
+  position:relative;
+  overflow-x: visible;
+  overflow-y: auto;
+
+
 }
 
 .nav-element {
@@ -88,6 +96,15 @@ body {
   font-style: italic;
   font-size: 18px;
 }
+
+.bold {
+  font-style: italic;
+  font-size: 18px;
+}
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.5 );
+}
+
 
 .sidebar {
   display: none;
@@ -183,35 +200,25 @@ body {
 
 
 .horizontal-scroll-wrapper {
-  width: 400px;
- height: 700px;
- overflow-x: hidden;
- overflow-y: scroll;
+  width: 800px;
+ height: 250px;
+z-index: 0;
 
- transform-origin: right top;
- transform:rotate(-90deg) translateY(-375px);
- position: relative;
 
 }
 
-.horizontal-scroll-wrapper > div {
-  width: 320px;
-  height: 350px;
-  transform: rotate(90deg);
 
-}
 
-.squares {
-  padding: $finalHeight 0 0 0;
-  & > div {
-
-  }
-}
 
 .ghost {
 box-sizing: border-box;
-background-color: #c2c2c4;
-border: solid 1px;
-border-bottom: solid 1px;
+background-color: #d1d3d6;
+border-radius:15px;
+height: 100px;
+float: left;
+width: 200px;
+margin: 5px;
+padding: 5px;
+opacity: .25;
 
 }
