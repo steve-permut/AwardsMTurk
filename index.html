@@ -1,155 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTurk Cognition Project</title>
+---
+layout: examples
+title: Carousel Template
+extra_css: "carousel.css"
+---
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><i>Human Cognition Initiative</i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Team</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MTurk Contributors</a>
+          </li>
+
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<main role="main">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet">
-    <script>$(document).ready(function(){
-      //prepare page
-      $('.pages').hide();
-      $('#page-one').show();
-      $('#p1').css("font-style","normal");
-      $("#footer-wrap").css("visibility", "visible");
-
-      //sidebar navigation
-      $('#p1').click(function(){
-        $('.pages').hide();
-        $('#page-one').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p1').css("font-style","normal");
-      });
-
-      $('#p2').click(function(){
-        $('.pages').hide();
-        $('#page-two').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p2').css("font-style","normal");
-      });
-
-      $('#p3').click(function(){
-        $('.pages').hide();
-        $('#page-three').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p3').css("font-style","normal");
-      });
-
-      $('#p4').click(function(){
-        $('.pages').hide();
-        $('#page-four').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p4').css("font-style","normal");
-      });
-
-      $('#p5').click(function(){
-        $('.pages').hide();
-        $('#page-five').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p5').css("font-style","normal");
-      });
-
-      $('#p6').click(function(){
-        $('.pages').hide();
-        $('#page-six').show();
-        $('.nav-element').css("font-style","italic");
-        $('#p6').css("font-style","normal");
-      });
-
-      $('.ghost').mouseover(function(){
-        $(this).css({"opacity": "1"});
-        $(this).css({"position": "relative"});
-        $(this).css({"z-index": "5"});
 
 
-      });
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      $('.ghost').mouseout(function(){
-        $(this).css({"opacity": ".25"});
-
-
-
-      });
-
-    });
-</script>
-
-  </head>
-  <body>
-    <div id="page-content">
-    <h1 id="heading-xs" class="page-head text-left"><a href="index.html" style="color:black" class="header-text">MTURK HALL OF FAME</a></h1>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-md-2 col-sm-3 sidebar">
-          <div class="image-container">
-            <div class=clearfix>
-              <div class="circle-crop">
-              </div>
-            </div>
-          </div>
-          <nav>
-          <div class="sidebar-nav">
-            <ul class="nav nav-sidebar image-container">
-              <li id="p1" class="nav-element">home</li>
-              <li id="p2" class="nav-element">about</li>
-              <li id="p3" class="nav-element">honors</li>
-
-            </ul>
-        </div>
-        </nav>
-        </div>
-        <div class="col-xs-12 col-sm-9 col-md-8 col-md-offset-2 col-sm-offset-3">
-          <div id="page-one" class="pages">
-            <h2>HOME</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
- 
-            </p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-
-          </div>
-          <div id="page-two" class="pages">
-            <h2>ABOUT THIS RESEARCH</h2>
-<p>            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-<p>            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-</blockquote>
-            <p>
-            </p>
-          </div>
-          <div id="page-three" class="pages">
-            <h2>HONORS LIST</h2>
-            <strong>Hover over a profile to learn about a top-scoring worker</strong>
-<center>  <div id="container">  <div class="horizontal-scroll-wrapper squares">
-  <div class="ghost grow"> item 1 </div>
-  <div class="ghost grow"> item 2 </div>
-  <div class="ghost grow"> item 3 </div>
-  <div class="ghost grow"> item 4 </div>
-  <div class="ghost grow"> item 5 </div>
-  <div class="ghost grow"> item 6 </div>
-  <div class="ghost grow"> item 7 </div>
-  <div class="ghost grow"> item 8 </div>
-  <div class="ghost grow"> item 9 </div>
-  <div class="ghost grow"> item 10 </div>
-  <div class="ghost grow"> item 11 </div>
-  <div class="ghost grow"> item 12 </div>
-  <div class="ghost grow"> item 13 </div>
-  <div class="ghost grow"> item 14 </div>
-  <div class="ghost grow"> item 15 </div>
-  <div class="ghost grow"> item 16 </div>
-  <div class="ghost grow"> item 17 </div>
-  <div class="ghost grow"> item 18 </div>
+<div style= "position: relative; height: 450px; overflow: hidden;" class= "container-fluid">
+    <img style="position: absolute; width: 100%; top: 0px; bottom: 0px; left: 0px; right: 0px;" src="https://live.staticflickr.com/7620/17238131685_ac870df150_h.jpg"/>
 </div>
-</div><center>
-  </body>
-</html>
+
+<div style="height: 50px" class="container-fluid"></div>
+
+
+
+
+  <div class="container marketing">
+
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5">
+        {% include icons/placeholder.svg width="500" height="500" background="#eee" color="#aaa" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" %}
+      </div>
+    </div>
+
+<hr class="featurette-divider">
+
+    <div class="row featurette" style="height: 200px; width: 105%;">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        {% include icons/placeholder.svg width="500" height="500" background="#eee" color="#aaa" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" %}
+      </div>
+    </div>
+
+  <hr class="featurette-divider">
+    <!-- Three columns of text below the carousel -->
+      <h1><center>Our Focus</center><br></h1>
+    <div class="row">
+      <div class="col-lg-4">
+      <center><div style="width:75; height:75; background:#777; color: #777;" class="rounded-circle"></div>
+        <h2>Motivation</h2></center>
+        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <center><div style="width:75; height:75; background:#777; color: #777;" class="rounded-circle"></div>
+        <h2>Wellness</h2></center>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <center><div style="width:75; height:75; background:#777; color: #777;" class="rounded-circle"></div>
+        <h2>Feedback</h2></center>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+
+
+
+
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2017-{{ site.time | date: "%Y" }} Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+
+
+
+</main>
